@@ -1,0 +1,70 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+:root{
+    --White: hsl(0, 0%, 100%);
+    --Light_gray: hsl(212, 45%, 89%);
+    --Grayish_blue: hsl(220, 15%, 55%);
+    --Dark_blue: hsl(218, 44%, 22%);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body, html{
+    width: 100%;
+    height: 100%;
+}
+.main{
+    background-color: var(--Light_gray);
+    padding: 10px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.qr_section{
+    width: 27%;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 5%;
+    background-color: var(--White);
+    border-radius: 10px;
+}
+.qr_section .up_section{
+    width: 100%;
+    height: 60%;
+    background-image: url(./images/image-qr-code.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+}
+.qr_section .down_section{
+    font-family: 'Outfit', sans-serif;
+    width: 100%;
+    height: calc(100% - 60%);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10%;
+}
+.down_section p{
+    font-size: 1.2vw;
+    color: var(--Grayish_blue);
+}
+@media (max-width : 600px) {
+    .main{
+        height: 120vh;
+    }
+    .qr_section{
+        width: 100%;
+        height: 100vh;
+    }
+    .down_section p{
+        font-size: 5vw;
+    }
+}
+
