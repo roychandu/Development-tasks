@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+:root{
+    --White: hsl(0, 0%, 100%);
+    --Light_pink: hsl(275, 100%, 97%);
+    --Grayish_purple: hsl(292, 16%, 49%);
+    --Dark_purple: hsl(292, 42%, 14%);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Work Sans';
+}
+html, body{
+    width: 100%;
+    height: 100%;
+}
+.main{
+    width: 100%;
+    height: 120vh;
+    background-image: url(./assets/images/background-pattern-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top;
+    background-color: var(--Light_pink);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.FAQs_box{
+    width: 50%;
+    height: 75%;
+    border-radius: 10px;
+    background-color: var(--White);
+    padding-left: 3%;
+    padding-right: 3%;
+}
+.heading{
+    display: flex;
+    align-items: center;
+    height: 30%;
+    gap: 3%;
+    font-size: 1.5vw;
+}
+.accordion{
+    height: 17.5%;
+    overflow: hidden;
+    border-bottom: var(--Grayish_purple) solid 1px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.accordion:hover{
+    color: var(--Grayish_purple);
+}
+.accordion:nth-child(5n){
+    border-bottom: none;
+}
+.accordion .questions{
+    display: flex;
+    align-items: center;
+    font-size: 0.7vw;
+    justify-content: space-between;
+}
+.accordion .answer{
+    color: var(--Grayish_purple);
+    transition: all 1s;
+    max-height: 0;
+    overflow: hidden;
+}
+.answer.active{
+    max-height: 100px;
+}
+
+@media (max-width : 600px) {
+    .main{
+        background-image: url(/assets/images/background-pattern-mobile.svg);
+    }
+    .FAQs_box{
+        width: 80%;
+    }
+    .heading{
+        font-size: 5vw;
+        height: 20%;
+    }
+    .accordion{
+        height: 20%;
+    }
+    .accordion .questions{
+        font-size: 2vw;
+    }
+    .accordion .answer{
+        font-size: 3vw;
+    }
+}
