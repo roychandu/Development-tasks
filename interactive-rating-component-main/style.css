@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap');
+:root{
+    --White: hsl(0, 0%, 100%);
+    --Light_Grey: hsl(217, 12%, 63%);
+    --Dark_Blue: hsl(213, 19%, 18%);
+    --Very_Dark_Blue: hsl(216, 12%, 8%);
+    --Orange: hsl(25, 97%, 53%);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Overpass';
+    background-color: var(--Very_Dark_Blue);
+}
+html, body{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.main, .thank_you{
+    width: 30%;
+    padding-left: 2%;
+    padding-right: 2%;
+    border-radius: 30px;
+    background-color: var(--Dark_Blue);
+}
+.main img{
+    padding: 5%;
+    border-radius: 50%;
+    margin: 10% 0 10% 0;
+    box-shadow: 0 0 10px 5px var(--Very_Dark_Blue);
+    background-color: var(--Dark_Blue);
+}
+.main h1{
+    background-color: var(--Dark_Blue);
+    color: var(--White);
+    margin: 0 0 2% 0;
+    font-size: 2vw;
+}
+.main p{
+    background-color: var(--Dark_Blue);
+    color: var(--Light_Grey);
+    line-height: 1.7;
+    padding: 0 10% 0 0;
+    font-weight: 700;
+    margin-bottom: 5%;
+    font-size: 1vw;
+}
+ul{
+    list-style-type: none;
+}
+.main ul{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10%;
+    background-color: var(--Dark_Blue)
+}
+.main ul li{
+    background-color: var(--Dark_Blue);
+}
+.main ul li button{
+    width: 4vw;
+    min-height: 9vh;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--Dark_Blue);
+    box-shadow: 0 0 10px 5px var(--Very_Dark_Blue);
+    color: var(--Light_Grey);
+    font-size: 1.5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+.main ul li button:hover{
+    background-color: var(--Light_Grey);
+    color: var(--White);
+    box-shadow: 0 0 10px 1px var(--Light_Grey);
+}
+.main ul li button:focus{
+    background-color: var(--Orange);
+    color: var(--Dark_Blue);
+    box-shadow: 0 0 20px 1px var(--Orange);
+}
+.btn-submit{
+    width: 100%;
+    padding: 1.5vh 0 1.5vh 0;
+    background-color: var(--Orange);
+    font-weight: 700;
+    font-size: 1.5vw;
+    letter-spacing: 0.2vw;
+    border-radius: 50px;
+    border: var(--Dark_Blue);
+    box-shadow: 0 0 10px 5px var(--Very_Dark_Blue);
+    margin-bottom: 10%;
+    cursor: pointer;
+}
+.btn-submit:hover{
+    background-color: var(--Light_Grey);
+    color: var(--Orange);
+    box-shadow: 0 0 10px 1px var(--Light_Grey);
+}
+
+.thank_you{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.hidden{
+    display: none;
+}
+.thank_you img{
+    background-color: var(--Dark_Blue);
+    margin: 10% 0 10%;
+}
+.thank_you h3{
+    background-color: var(--Dark_Blue);
+    margin-bottom: 10%;
+    padding: 4% 10% 3%;
+    border-radius: 50px;
+    box-shadow: 0 0 10px 5px var(--Very_Dark_Blue) ;
+    color: var(--Orange);
+    font-weight: 700;
+    font-size: 1.2vw;
+}
+#rate{
+    background-color: var(--Dark_Blue);
+}
+.thank_you h1{
+    background-color: var(--Dark_Blue);
+    margin-bottom: 5%;
+    color: var(--White);
+    font-size: 2.5vw;
+}
+.thank_you p{
+    background-color: var(--Dark_Blue);
+    margin-bottom: 10%;
+    color: var(--Light_Grey);
+    padding: 0 10% 0 10%;
+    text-align: center;
+    font-weight: 700;
+    line-height: 1.5;
+    font-size: 1vw;
+}
+
+@media (max-width : 600px) {
+    .main, .thank_you{
+        width: 90%;
+        padding: 0 5% 0;
+    }
+    .main h1{
+        font-size: 8vw;
+    }
+    .main p{
+        font-size: 3vw;
+    }
+    .main ul li button{
+        font-size: 4vw;
+        width: 13vw;
+        height: 8vh;
+        margin-top: 10%;
+    }
+    .btn-submit{
+        margin-top: 5%;
+        font-size: 4vw;
+    }
+    .thank_you h3{
+        font-size: 4vw;
+    }
+    .thank_you h1{
+        font-size: 6vw;
+    }
+    .thank_you p{
+        font-size: 3vw;
+        padding: 0 5% 0;
+    }
+}
