@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+:root{
+    --Desaturated_Red: hsl(0, 36%, 70%);
+    --Soft_Red: hsl(0, 93%, 68%);
+    --Dark_Grayish_Red: hsl(0, 6%, 24%);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans';
+}
+html, body{
+    width: 100%;
+    height: 100%;
+    background-image: url(./images/bg-pattern-desktop.svg);
+    display: flex;
+}
+.container{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: 1fr 3fr;
+}
+.box1{
+    display: flex;
+    align-items: center;
+    padding-left: 15%;
+}
+.box2{
+    grid-row: span 2;
+    background-image: url(./images/hero-desktop.jpg);
+    background-position: left;
+    background-repeat: round;
+    background-size: contain;
+}
+.box3{
+    padding-left: 15%;
+}
+.box3 > :nth-child(1){
+    color: var(--Desaturated_Red);
+    font-size: 6vw;
+    letter-spacing: 2vw;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+.box3 > :nth-child(2){
+    font-size: 4vw;
+    letter-spacing: 2vw;
+    font-weight: 400;
+    margin-bottom: 6%;
+    text-transform: uppercase;
+}
+.box3 p{
+    font-size: 1.2vw;
+    color: var(--Desaturated_Red);
+    padding-right: 30%;
+}
+.input-field{
+    margin-top: 4%;
+    height: 10%;
+    margin-right: 30%;
+}
+.box3 input{
+    border: 2px var(--Desaturated_Red) solid;
+    width: 100%;
+    height: 100%;
+    padding-left: 10%;
+    border-radius: 50px;
+    font-size: 1vw;
+}
+.input-field .arrow-img{
+    position: relative;
+    left: 78%;
+    top: -200%;
+    width: 22%;
+    height: 100%;
+    background: linear-gradient(135deg ,hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    border-radius: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s;
+    box-shadow: 5px 5px 10px 1px var(--Desaturated_Red);
+
+}
+.input-field .wrong-email{
+    position: relative;
+    left: 63%;
+    top: -100%;
+    width: 20%;
+    height: 100%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s;
+    opacity: 0;
+}
+.arrow-img:hover{
+    box-shadow: 10px 5px 10px 5px hsl(0, 13%, 58%);
+    background: linear-gradient(135deg ,hsl(0, 80%, 86%), hsl(0, 13%, 58%));
+}
+#valid{
+    padding-left: 10%;
+    margin-top: 2%;
+    opacity: 0;
+}
+
+/* Responsiveness */
+
+@media (max-width:600px) {
+    .container{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .box1{
+        width: 100%;
+        padding-left: 10%;
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+    .box2{
+        width: 100%;
+        height: 50%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: top;
+        margin-bottom: 10%;
+    }
+    .box3{
+        text-align: center;
+        padding-right: 5%;
+    }
+    .box3 > :nth-child(1){
+        font-size: 10vw;
+        margin-left: -15%;
+    }
+    .box3 > :nth-child(2){
+        margin-left: -15%;
+        font-size: 10vw;
+    }
+    .box3 p{
+        font-size: 4vw;
+        padding-right: 0;
+        margin-left: -15%;
+    }
+    .input-field{
+        margin-left: -15%;
+        margin-right: -1%;
+        height: 15%;
+    }
+    .box3 input{
+        font-size: 5vw;
+    }
+}
