@@ -117,7 +117,7 @@ html, body{
     align-items: center;
     gap: 1vw;
     font-weight: 700;
-    border: solid 1px var(--Rose_500);
+    border: solid 2px var(--Rose_500);
     cursor: pointer;
 }
 .left_part_box .detail_box{
