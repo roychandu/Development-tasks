@@ -34,6 +34,7 @@ html, body{
     height: 100%;
     display: flex;
     flex-wrap: wrap;
+    gap: 1.2vw;
     justify-content: space-between;
 }
 .heading{
@@ -42,7 +43,6 @@ html, body{
 .left_part_box{
     width: 32%;
     height: 30%;
-    border: solid;
 }
 .left_part_box .img_box{
     width: 100%;
