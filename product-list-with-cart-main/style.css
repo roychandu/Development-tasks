@@ -147,7 +147,29 @@ span{
 
 
 .right_part{
-    border: solid;
     width: 30%;
-    height: 40%;
+    height: 25%;
+    background-color: var(--Rose_50);
+    border-radius: 20px;
+}
+.right_part .right_part_heading{
+    width: 100%;
+    padding-left: 2vw;
+    margin-top: 1vw;
+    color: var(--Red);
+}
+.right_part .cart_item{
+    width: 100%;
+    height: 60%;
+    margin-top: 2vw;
+    background-image: url(assets/images/illustration-empty-cart.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.right_part p{
+    display: flex;
+    justify-content: center;
+    font-weight: 700;
+    color: var(--Rose_500);
 }
