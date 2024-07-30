@@ -2,6 +2,8 @@ const add_btn = document.querySelectorAll(".btn_box");
 const decrese_imgs = document.querySelectorAll(".decrese_img");
 const increse_imgs = document.querySelectorAll(".increse_img");
 const quantities = document.querySelectorAll(".quantity");
+const img_empty = document.querySelector(".cart_item");
+const cart_p = document.querySelector(".cart_p");
 
 add_btn.forEach((btn, index) => {
     let quantity = 1;
@@ -14,6 +16,9 @@ add_btn.forEach((btn, index) => {
         decrese_imgs[index].src = "./assets/images/icon-decrement-quantity.svg";
         quantities[index].innerHTML = quantity;
         quantities[index].style.color = "hsl(20, 50%, 98%)";
+        img_empty.style.opacity = "0";
+        cart_p.style.opacity = "0";
+        
     });
 
     increse_imgs[index].addEventListener("click", () => {

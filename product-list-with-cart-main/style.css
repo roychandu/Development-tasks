@@ -183,10 +183,12 @@ span{
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
+    opacity: 1;
 }
 .right_part p{
     display: flex;
     justify-content: center;
     font-weight: 700;
     color: var(--Rose_500);
+    opacity: 1;
 }
