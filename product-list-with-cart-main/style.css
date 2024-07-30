@@ -151,7 +151,7 @@ html, body{
     font-weight: 700;
     color: var(--Rose_900);
 }
-span{
+.price{
     font-size: 1vw;
     font-weight: 700;
     color: var(--Red);
