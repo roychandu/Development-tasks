@@ -162,7 +162,7 @@ span{
 
 .right_part{
     width: 30%;
-    height: fit-content;
+    height: max-content;
     background-color: var(--Rose_50);
     border-radius: 20px;
 }
