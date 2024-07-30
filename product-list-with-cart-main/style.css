@@ -172,7 +172,7 @@ span{
     margin-top: 1vw;
     color: var(--Red);
 }
-.add_items{
+.total_items{
     font-size: 1.4vw;
 }
 .right_part .cart_item{
