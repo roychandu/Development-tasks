@@ -4,9 +4,11 @@ const increse_imgs = document.querySelectorAll(".increse_img");
 const quantities = document.querySelectorAll(".quantity");
 const img_empty = document.querySelector(".empty_img");
 const cart_p = document.querySelector(".cart_p");
-const selected_item = document.querySelector(".cart_item");
-const desserts = document.querySelectorAll(".dessert_name");
 const total_span = document.querySelector(".total_items");
+
+const desserts = document.querySelectorAll(".dessert_name");
+const desserts_prices = document.querySelectorAll(".price");
+const selected_item = document.querySelector(".cart_item");
 
 let total_item = 0;
 const addedItems = new Array(add_btn.length).fill(false);
@@ -26,9 +28,8 @@ add_btn.forEach((btn, index) => {
             img_empty.style.height = "0";
             cart_p.style.opacity = "0";
 
-            const items = desserts[index];
-            selected_item.appendChild(items);
-            selected_item.innerHTML;
+            // Update the selected item to include dessert name and price
+            updateSelectedItem();
 
             addedItems[index] = true;
             updateTotalItems();
@@ -52,6 +53,17 @@ add_btn.forEach((btn, index) => {
     });
 });
 
+function updateSelectedItem() {
+    selected_item.innerHTML = ""; // Clear existing content
+    add_btn.forEach((btn, index) => {
+        if (addedItems[index]) {
+            const item = document.createElement("div");
+            item.innerHTML = `${desserts[index].innerHTML} - ${desserts_prices[index].innerHTML}`;
+            selected_item.appendChild(item);
+        }
+    });
+}
+
 function updateTotalItems() {
     total_item = 0;
     add_btn.forEach((btn, index) => {
@@ -60,4 +72,7 @@ function updateTotalItems() {
         }
     });
     total_span.innerHTML = total_item;
+
+    // Update the selected items display
+    updateSelectedItem();
 }
