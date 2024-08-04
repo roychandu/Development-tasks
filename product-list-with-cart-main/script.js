@@ -28,11 +28,9 @@ add_btn.forEach((btn, index) => {
             img_empty.style.height = "0";
             cart_p.style.opacity = "0";
 
-            // Update the selected item to include dessert name and price
-            updateSelectedItem();
-
             addedItems[index] = true;
             updateTotalItems();
+            updateSelectedItem();
         }
     });
 
@@ -41,6 +39,7 @@ add_btn.forEach((btn, index) => {
             quantity += 1;
             quantities[index].innerHTML = quantity;
             updateTotalItems();
+            updateSelectedItem();
         }
     });
 
@@ -49,20 +48,29 @@ add_btn.forEach((btn, index) => {
             quantity -= 1;
             quantities[index].innerHTML = quantity;
             updateTotalItems();
+            updateSelectedItem();
         }
     });
 });
 
 function updateSelectedItem() {
-    selected_item.innerHTML = ""; // Clear existing content
+    selected_item.innerHTML = "";
     add_btn.forEach((btn, index) => {
         if (addedItems[index]) {
             const item = document.createElement("div");
-            item.innerHTML = `${desserts[index].innerHTML} - ${desserts_prices[index].innerHTML}`;
-            selected_item.appendChild(item);
+            item.setAttribute("class", "selected_item");
+            
+            const itemName = desserts[index].innerHTML.trim();
+            const itemPrice = parseFloat(desserts_prices[index].innerHTML.replace(/[^0-9.-]+/g, ""));
+            const itemQuantity = parseInt(quantities[index].innerHTML.trim());
+
+            
         }
     });
 }
+
+
+
 
 function updateTotalItems() {
     total_item = 0;
@@ -72,7 +80,4 @@ function updateTotalItems() {
         }
     });
     total_span.innerHTML = total_item;
-
-    // Update the selected items display
-    updateSelectedItem();
 }
