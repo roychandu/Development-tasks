@@ -5,6 +5,7 @@ const quantities = document.querySelectorAll(".quantity");
 const img_empty = document.querySelector(".empty_img");
 const cart_p = document.querySelector(".cart_p");
 const total_span = document.querySelector(".total_items");
+const confirm_btn = document.querySelector(".confirm_button");
 
 const desserts = document.querySelectorAll(".dessert_name");
 const desserts_prices = document.querySelectorAll(".price");
@@ -28,6 +29,8 @@ add_btn.forEach((btn, index) => {
             quantities[index].style.color = "hsl(20, 50%, 98%)";
             img_empty.style.height = "0";
             cart_p.style.opacity = "0";
+            confirm_btn.style.height = "max-Content";
+            confirm_btn.style.opacity = "1";
 
             addedItems[index] = true;
             updateTotalItems();
