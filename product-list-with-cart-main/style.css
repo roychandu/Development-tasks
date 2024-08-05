@@ -214,3 +214,17 @@ html, body{
 .item_quantity{
     color: var(--Red);
 }
+.Cancel_item{
+    width: 1vw;
+    height: 2vh;
+    padding: 0.8vw;
+    border-radius: 50%;
+    background-image: url(assets/images/icon-remove-item.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    border: solid 1px var(--Rose_500);
+    position: absolute;
+    left: 90%;
+    transform: translateY(50%);
+    cursor: pointer;
+}

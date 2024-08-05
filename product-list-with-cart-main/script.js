@@ -71,6 +71,9 @@ function updateSelectedItem() {
             const itemDetailsDiv = document.createElement("div");
             itemDetailsDiv.setAttribute("class", "item_details");
 
+            const itemCancelDiv = document.createElement("div");
+            itemCancelDiv.setAttribute("class", "Cancel_item");
+
             const itemQuantityDiv = document.createElement("div");
             itemQuantityDiv.setAttribute("class", "item_quantity");
             itemQuantityDiv.innerHTML = `${itemQuantity}x`;
@@ -90,6 +93,7 @@ function updateSelectedItem() {
             
             item.appendChild(itemNameDiv);
             item.appendChild(itemDetailsDiv);
+            item.appendChild(itemCancelDiv);
             selected_item.appendChild(item);
         }
     });
