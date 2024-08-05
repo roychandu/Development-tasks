@@ -9,6 +9,7 @@ const total_span = document.querySelector(".total_items");
 const desserts = document.querySelectorAll(".dessert_name");
 const desserts_prices = document.querySelectorAll(".price");
 const selected_item = document.querySelector(".cart_item");
+const total_order = document.querySelector(".total_order");
 
 let total_item = 0;
 const addedItems = new Array(add_btn.length).fill(false);
@@ -55,6 +56,7 @@ add_btn.forEach((btn, index) => {
 
 function updateSelectedItem() {
     selected_item.innerHTML = "";
+    total_order.innerHTML = "Order Total";
     add_btn.forEach((btn, index) => {
         if (addedItems[index]) {
             const item = document.createElement("div");
@@ -90,6 +92,7 @@ function updateSelectedItem() {
             itemDetailsDiv.appendChild(itemQuantityDiv);
             itemDetailsDiv.appendChild(itemPriceDiv);
             itemDetailsDiv.appendChild(totalItemPriceDiv);
+
             
             item.appendChild(itemNameDiv);
             item.appendChild(itemDetailsDiv);
