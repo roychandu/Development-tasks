@@ -209,19 +209,42 @@ html, body{
     transform: translateY(40%);
 }
 .total_order{
-    border: solid;
     display: flex;
     flex-direction: column;
+    height: 0;
+    opacity: 0;
 }
 .total_order_box1{
     display: flex;
     justify-content: space-between;
-    border: solid;
+    padding: 0.5vw 1vw;
+}
+.total_order_box1 p{
+    transform: translateY(30%);
 }
 .total_order_box2{
     display: flex;
-    border: solid;
+    justify-content: center;
+    gap: 1vw;
+    margin: 0 1vw;
+    padding: 0.5vw 0;
+    background-color: var(--Rose_100);
+    border-radius: 10px;
 }
+.total_order_box2 p{
+    transform: translateY(30%);
+    color: var(--Rose_500);
+}
+.total_price{
+    font-size: 1.5vw;
+    font-weight: 900;
+}
+.total_order_box2_span{
+    color: var(--Rose_900);
+    margin: 0 0.1vw;
+}
+
+
 /* JavaScript elements  */
 .selected_item{
     display: flex;

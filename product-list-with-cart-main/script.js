@@ -11,6 +11,7 @@ const desserts = document.querySelectorAll(".dessert_name");
 const desserts_prices = document.querySelectorAll(".price");
 const selected_item = document.querySelector(".cart_item");
 const total_price = document.querySelector(".total_price");
+const total_order = document.querySelector(".total_order");
 
 let total_item = 0;
 const addedItems = new Array(add_btn.length).fill(false);
@@ -29,8 +30,10 @@ add_btn.forEach((btn, index) => {
             quantities[index].style.color = "hsl(20, 50%, 98%)";
             img_empty.style.height = "0";
             cart_p.style.opacity = "0";
-            confirm_btn.style.height = "max-Content";
+            confirm_btn.style.height = "max-content";
             confirm_btn.style.opacity = "1";
+            total_order.style.height = "max-content";
+            total_order.style.opacity = "1";
 
             addedItems[index] = true;
             updateTotalItems();
@@ -106,7 +109,7 @@ function updateSelectedItem() {
             selected_item.appendChild(item);
         }
     });
-    total_price.innerHTML = total_calu;
+    total_price.innerHTML = "$"+total_calu.toFixed(2);
 
 }
 
