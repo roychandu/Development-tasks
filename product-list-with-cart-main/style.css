@@ -196,6 +196,17 @@ html, body{
 .confirm_button{
     height: 0;
     opacity: 0;
+    display: flex;
+    justify-content: center;
+    margin: 1vw 1vw;
+    padding: 0.3vw;
+    border-radius: 40px;
+    background-color: var(--Red);
+    cursor: pointer;
+}
+.confirm_button p{
+    color: var(--Rose_50);
+    transform: translateY(40%);
 }
 
 /* JavaScript elements  */
