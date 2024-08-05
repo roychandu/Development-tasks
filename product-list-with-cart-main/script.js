@@ -64,7 +64,33 @@ function updateSelectedItem() {
             const itemPrice = parseFloat(desserts_prices[index].innerHTML.replace(/[^0-9.-]+/g, ""));
             const itemQuantity = parseInt(quantities[index].innerHTML.trim());
 
+            const itemNameDiv = document.createElement("div");
+            itemNameDiv.setAttribute("class", "item_name");
+            itemNameDiv.innerHTML = itemName;
             
+            const itemDetailsDiv = document.createElement("div");
+            itemDetailsDiv.setAttribute("class", "item_details");
+
+            const itemQuantityDiv = document.createElement("div");
+            itemQuantityDiv.setAttribute("class", "item_quantity");
+            itemQuantityDiv.innerHTML = `${itemQuantity}x`;
+
+            const itemPriceDiv = document.createElement("div");
+            itemPriceDiv.setAttribute("class", "item_price");
+            itemPriceDiv.innerHTML = `@$${itemPrice.toFixed(2)}`;
+
+            const totalPrice = itemPrice * itemQuantity;
+            const totalItemPriceDiv = document.createElement("div");
+            totalItemPriceDiv.setAttribute("class", "total_item_price");
+            totalItemPriceDiv.innerHTML = `$${totalPrice.toFixed(2)}`;
+
+            itemDetailsDiv.appendChild(itemQuantityDiv);
+            itemDetailsDiv.appendChild(itemPriceDiv);
+            itemDetailsDiv.appendChild(totalItemPriceDiv);
+            
+            item.appendChild(itemNameDiv);
+            item.appendChild(itemDetailsDiv);
+            selected_item.appendChild(item);
         }
     });
 }

@@ -193,3 +193,6 @@ html, body{
     margin-bottom: 1vw;
     opacity: 1;
 }
+.details_box{
+    border: solid;
+}
