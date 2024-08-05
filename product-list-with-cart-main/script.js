@@ -56,7 +56,7 @@ add_btn.forEach((btn, index) => {
 
 function updateSelectedItem() {
     selected_item.innerHTML = "";
-    total_order.innerHTML = "Order Total";
+    let total_calu = 0;
     add_btn.forEach((btn, index) => {
         if (addedItems[index]) {
             const item = document.createElement("div");
@@ -88,6 +88,9 @@ function updateSelectedItem() {
             const totalItemPriceDiv = document.createElement("div");
             totalItemPriceDiv.setAttribute("class", "total_item_price");
             totalItemPriceDiv.innerHTML = `$${totalPrice.toFixed(2)}`;
+            
+            
+            total_calu += totalPrice;
 
             itemDetailsDiv.appendChild(itemQuantityDiv);
             itemDetailsDiv.appendChild(itemPriceDiv);
@@ -100,6 +103,8 @@ function updateSelectedItem() {
             selected_item.appendChild(item);
         }
     });
+    total_order.innerHTML = total_calu;
+
 }
 
 
