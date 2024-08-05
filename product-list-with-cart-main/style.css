@@ -193,7 +193,10 @@ html, body{
     margin-bottom: 1vw;
     opacity: 1;
 }
-
+.confirm_button{
+    height: 0;
+    opacity: 0;
+}
 
 /* JavaScript elements  */
 .selected_item{
