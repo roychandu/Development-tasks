@@ -208,7 +208,20 @@ html, body{
     color: var(--Rose_50);
     transform: translateY(40%);
 }
-
+.total_order{
+    border: solid;
+    display: flex;
+    flex-direction: column;
+}
+.total_order_box1{
+    display: flex;
+    justify-content: space-between;
+    border: solid;
+}
+.total_order_box2{
+    display: flex;
+    border: solid;
+}
 /* JavaScript elements  */
 .selected_item{
     display: flex;

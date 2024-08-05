@@ -10,7 +10,7 @@ const confirm_btn = document.querySelector(".confirm_button");
 const desserts = document.querySelectorAll(".dessert_name");
 const desserts_prices = document.querySelectorAll(".price");
 const selected_item = document.querySelector(".cart_item");
-const total_order = document.querySelector(".total_order");
+const total_price = document.querySelector(".total_price");
 
 let total_item = 0;
 const addedItems = new Array(add_btn.length).fill(false);
@@ -106,7 +106,7 @@ function updateSelectedItem() {
             selected_item.appendChild(item);
         }
     });
-    total_order.innerHTML = total_calu;
+    total_price.innerHTML = total_calu;
 
 }
 
