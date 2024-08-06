@@ -81,6 +81,11 @@ function updateSelectedItem() {
 
             const itemCancelDiv = document.createElement("div");
             itemCancelDiv.setAttribute("class", "Cancel_item");
+            itemCancelDiv.addEventListener("click", () => {
+                addedItems[index] = false;
+                updateTotalItems();
+                updateSelectedItem();
+            });
 
             const itemQuantityDiv = document.createElement("div");
             itemQuantityDiv.setAttribute("class", "item_quantity");
