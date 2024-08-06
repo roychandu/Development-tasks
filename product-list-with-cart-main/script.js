@@ -21,6 +21,8 @@ add_btn.forEach((btn, index) => {
 
     btn.addEventListener("click", () => {
         if (!addedItems[index]) {
+            quantity = 1;
+
             btn.style.backgroundColor = "hsl(14, 86%, 42%)";
             btn.style.border = "hsl(14, 86%, 42%)";
             btn.style.gap = "2.5vw";
@@ -82,7 +84,16 @@ function updateSelectedItem() {
             const itemCancelDiv = document.createElement("div");
             itemCancelDiv.setAttribute("class", "Cancel_item");
             itemCancelDiv.addEventListener("click", () => {
+                btn.style.backgroundColor = "";
+                btn.style.border = "";
+                btn.style.gap = "";
+                decrese_imgs[index].src = "./assets/images/icon-add-to-cart.svg";
+                quantities[index].innerHTML = "Add to Cart";
+                quantities[index].style.color = "";
                 addedItems[index] = false;
+                quantity = 1; 
+                quantities[index] = quantity;
+
                 updateTotalItems();
                 updateSelectedItem();
             });
@@ -100,13 +111,11 @@ function updateSelectedItem() {
             totalItemPriceDiv.setAttribute("class", "total_item_price");
             totalItemPriceDiv.innerHTML = `$${totalPrice.toFixed(2)}`;
             
-            
             total_calu += totalPrice;
 
             itemDetailsDiv.appendChild(itemQuantityDiv);
             itemDetailsDiv.appendChild(itemPriceDiv);
             itemDetailsDiv.appendChild(totalItemPriceDiv);
-
             
             item.appendChild(itemNameDiv);
             item.appendChild(itemDetailsDiv);
@@ -114,12 +123,8 @@ function updateSelectedItem() {
             selected_item.appendChild(item);
         }
     });
-    total_price.innerHTML = "$"+total_calu.toFixed(2);
-
+    total_price.innerHTML = "$" + total_calu.toFixed(2);
 }
-
-
-
 
 function updateTotalItems() {
     total_item = 0;
