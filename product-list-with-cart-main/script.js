@@ -30,7 +30,7 @@ add_btn.forEach((btn, index) => {
             decrese_imgs[index].src = "./assets/images/icon-decrement-quantity.svg";
             quantities[index].innerHTML = quantity;
             quantities[index].style.color = "hsl(20, 50%, 98%)";
-            img_empty.style.height = "0";
+            img_empty.style.display = "none";
             cart_p.style.opacity = "0";
             confirm_btn.style.height = "max-content";
             confirm_btn.style.opacity = "1";
@@ -65,8 +65,10 @@ add_btn.forEach((btn, index) => {
 function updateSelectedItem() {
     selected_item.innerHTML = "";
     let total_calu = 0;
+    let itemsInCart = false;
     add_btn.forEach((btn, index) => {
         if (addedItems[index]) {
+            itemsInCart = true;
             const item = document.createElement("div");
             item.setAttribute("class", "selected_item");
             
@@ -124,6 +126,15 @@ function updateSelectedItem() {
         }
     });
     total_price.innerHTML = "$" + total_calu.toFixed(2);
+
+    if (!itemsInCart) {
+        img_empty.style.display = "block";
+        cart_p.style.opacity = "1";
+        total_order.style.height = "0";
+        total_order.style.opacity = "0";
+        confirm_btn.style.height = "0";
+        confirm_btn.style.opacity = "0";
+    }
 }
 
 function updateTotalItems() {
