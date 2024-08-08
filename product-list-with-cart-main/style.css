@@ -320,7 +320,7 @@ html, body{
 .confirm_container{
     display: flex;
     width: 30vw;
-    justify-content: space-evenly;
+    gap: 1vw;
     border: solid;
 }
 .confirm_item_img{
@@ -333,6 +333,8 @@ html, body{
     border: solid;
 }
 .confirm_item_total{
+    position: absolute;
+    right: 10%;
     align-self: center;
     border: solid;
 }

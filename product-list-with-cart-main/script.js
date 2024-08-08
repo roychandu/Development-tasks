@@ -102,7 +102,7 @@ function finalConfirmOreder(){
             // img_box.innerHTML = dessert_img[index];
 
             const detail_box = document.createElement("div");
-            detail_box.setAttribute("class", "confirm_item_img");
+            detail_box.setAttribute("class", "confirm_item_details");
             detail_box.innerHTML = itemName;
             
             const quantitie_box = document.createElement("div");
@@ -120,7 +120,7 @@ function finalConfirmOreder(){
             
             detail_box.appendChild(quantitie_box);
             detail_box.appendChild(item_price_box);
-            // confirm_container.appendChild(img_box);
+            confirm_container.appendChild(img_box);
             confirm_container.appendChild(detail_box);
             confirm_container.appendChild(item_total_box);
             
