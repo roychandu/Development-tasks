@@ -290,10 +290,19 @@ html, body{
     background-color: var(--Rose_50);
     padding: 20px;
     z-index: 1;
+    border-radius: 1vw;
 }
 
-.order-confirmation-content {
-    text-align: center;
+.order_confirmation_content_box1 img{
+    width: 2vw;
+}
+.order_confirmation_content_box1 h1{
+    font-size: 2vw;
+}
+.order_confirmation_content_box1 p{
+    font-size: 1vw;
+    font-weight: 500;
+    color: var(--Rose_500);
 }
 
 .overlay {
