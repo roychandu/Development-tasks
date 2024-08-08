@@ -78,6 +78,8 @@ confirm_btn.addEventListener("click", () => {
 closeModalButton.addEventListener("click", () => {
     orderConfirmationModal.style.display = 'none';
     overlay.style.display = 'none';
+    cartReset();
+
 });
 
 
@@ -147,14 +149,19 @@ function updateSelectedItem() {
     total_price.innerHTML = "$" + total_calu.toFixed(2);
 
     if (!itemsInCart) {
-        img_empty.style.display = "block";
-        cart_p.style.opacity = "1";
-        total_order.style.height = "0";
-        total_order.style.opacity = "0";
-        confirm_btn.style.height = "0";
-        confirm_btn.style.opacity = "0";
+        cartReset();
     }
 }
+
+function cartReset(){
+    img_empty.style.display = "block";
+    cart_p.style.opacity = "1";
+    total_order.style.height = "0";
+    total_order.style.opacity = "0";
+    confirm_btn.style.height = "0";
+    confirm_btn.style.opacity = "0";
+}
+
 
 function updateTotalItems() {
     total_item = 0;
