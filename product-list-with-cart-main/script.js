@@ -13,6 +13,10 @@ const selected_item = document.querySelector(".cart_item");
 const total_price = document.querySelector(".total_price");
 const total_order = document.querySelector(".total_order");
 
+const orderConfirmationModal = document.getElementById('orderConfirmationModal');
+const overlay = document.getElementById('overlay');
+const closeModalButton = document.getElementById('closeModalButton');
+
 let total_item = 0;
 const addedItems = new Array(add_btn.length).fill(false);
 
@@ -61,6 +65,21 @@ add_btn.forEach((btn, index) => {
         }
     });
 });
+
+confirm_btn.addEventListener("click", () => {
+    if (total_item > 0) {
+        orderConfirmationModal.style.display = 'block';
+        overlay.style.display = 'block';
+    } else {
+        alert("Your cart is empty!");
+    }
+});
+
+closeModalButton.addEventListener("click", () => {
+    orderConfirmationModal.style.display = 'none';
+    overlay.style.display = 'none';
+});
+
 
 function updateSelectedItem() {
     selected_item.innerHTML = "";
