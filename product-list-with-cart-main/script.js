@@ -16,6 +16,8 @@ const total_order = document.querySelector(".total_order");
 const orderConfirmationModal = document.getElementById('orderConfirmationModal');
 const overlay = document.getElementById('overlay');
 const closeModalButton = document.getElementById('closeModalButton');
+const confirmOrder = document.querySelector(".order_confirmation_content_box2");
+const dessert_img = document.querySelector(".img_box");
 
 let total_item = 0;
 const addedItems = new Array(add_btn.length).fill(false);
@@ -70,6 +72,7 @@ confirm_btn.addEventListener("click", () => {
     if (total_item > 0) {
         orderConfirmationModal.style.display = 'block';
         overlay.style.display = 'block';
+        finalConfirmOreder();
     } else {
         alert("Your cart is empty!");
     }
@@ -80,6 +83,40 @@ closeModalButton.addEventListener("click", () => {
     overlay.style.display = 'none';
     resetCartAndButtons();
 });
+
+function finalConfirmOreder(){
+    confirmOrder.innerHTML = "";
+    add_btn.forEach((btn, index) =>{
+        if(addedItems[index]){
+            const itemName = desserts[index].innerHTML.trim();
+            const itemPrice = parseFloat(desserts_prices[index].innerHTML.replace(/[^0-9.-]+/g, ""));
+            const itemQuantity = parseInt(quantities[index].innerHTML.trim());
+            const totalPrice = itemPrice * itemQuantity;
+
+            const confirm_container = document.createElement("div");
+            confirm_container.setAttribute("class", "confirm_container");
+
+            const img_box = document.createElement("div");
+            img_box.setAttribute("class", "confirm_item_img");
+            // img_box.innerHTML = dessert_img[index];
+
+            detail_box = document.createElement("div");
+            detail_box.setAttribute("class", "confirm_item_img");
+            detail_box.innerHTML = itemName;
+
+            item_total_box = document.createElement("div");
+            item_total_box.setAttribute("class", "confirm_item_total");
+            item_total_box.innerHTML = totalPrice.toFixed(2);
+
+            // confirm_container.appendChild(img_box);
+            confirm_container.appendChild(detail_box);
+            confirm_container.appendChild(item_total_box);
+            
+
+            confirmOrder.appendChild(confirm_container);
+        }
+    })
+}
 
 function updateSelectedItem() {
     selected_item.innerHTML = "";
@@ -112,8 +149,7 @@ function updateSelectedItem() {
                 quantities[index].innerHTML = "Add to Cart";
                 quantities[index].style.color = "";
                 addedItems[index] = false;
-                quantity = 1; 
-                quantities[index].innerHTML = "Add to Cart";
+                quantity = 1;
 
                 updateTotalItems();
                 updateSelectedItem();
