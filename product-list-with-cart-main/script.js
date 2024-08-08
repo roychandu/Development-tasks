@@ -86,6 +86,7 @@ closeModalButton.addEventListener("click", () => {
 
 function finalConfirmOreder(){
     confirmOrder.innerHTML = "";
+    let grand_total = 
     add_btn.forEach((btn, index) =>{
         if(addedItems[index]){
             const itemName = desserts[index].innerHTML.trim();
@@ -100,14 +101,25 @@ function finalConfirmOreder(){
             img_box.setAttribute("class", "confirm_item_img");
             // img_box.innerHTML = dessert_img[index];
 
-            detail_box = document.createElement("div");
+            const detail_box = document.createElement("div");
             detail_box.setAttribute("class", "confirm_item_img");
             detail_box.innerHTML = itemName;
+            
+            const quantitie_box = document.createElement("div");
+            quantitie_box.setAttribute("class", "confirm_item_quantity");
+            quantitie_box.innerHTML = itemQuantity;
 
-            item_total_box = document.createElement("div");
+            const item_total_box = document.createElement("div");
             item_total_box.setAttribute("class", "confirm_item_total");
-            item_total_box.innerHTML = totalPrice.toFixed(2);
+            item_total_box.innerHTML = totalPrice;
 
+            const item_price_box = document.createElement("div");
+            item_price_box.setAttribute("class", "item_price");
+            item_price_box.innerHTML = itemPrice; 
+
+            
+            detail_box.appendChild(quantitie_box);
+            detail_box.appendChild(item_price_box);
             // confirm_container.appendChild(img_box);
             confirm_container.appendChild(detail_box);
             confirm_container.appendChild(item_total_box);
