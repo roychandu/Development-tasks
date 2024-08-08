@@ -78,10 +78,8 @@ confirm_btn.addEventListener("click", () => {
 closeModalButton.addEventListener("click", () => {
     orderConfirmationModal.style.display = 'none';
     overlay.style.display = 'none';
-    cartReset();
-
+    resetCartAndButtons();
 });
-
 
 function updateSelectedItem() {
     selected_item.innerHTML = "";
@@ -115,7 +113,7 @@ function updateSelectedItem() {
                 quantities[index].style.color = "";
                 addedItems[index] = false;
                 quantity = 1; 
-                quantities[index] = quantity;
+                quantities[index].innerHTML = "Add to Cart";
 
                 updateTotalItems();
                 updateSelectedItem();
@@ -162,6 +160,22 @@ function cartReset(){
     confirm_btn.style.opacity = "0";
 }
 
+function resetCartAndButtons() {
+    cartReset();
+    addedItems.fill(false);
+    add_btn.forEach((btn, index) => {
+        btn.style.backgroundColor = "";
+        btn.style.border = "";
+        btn.style.gap = "";
+        decrese_imgs[index].src = "./assets/images/icon-add-to-cart.svg";
+        quantities[index].innerHTML = "Add to Cart";
+        quantities[index].style.color = "";
+    });
+    total_item = 0;
+    total_span.innerHTML = total_item;
+    selected_item.innerHTML = "";
+    total_price.innerHTML = "$0.00";
+}
 
 function updateTotalItems() {
     total_item = 0;
