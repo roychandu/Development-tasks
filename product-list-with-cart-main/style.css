@@ -282,6 +282,7 @@ html, body{
 
 
 .order-confirmation-modal {
+    max-height: 95vh;
     display: none; 
     position: fixed;
     top: 50%;
@@ -291,7 +292,6 @@ html, body{
     padding: 20px;
     z-index: 1;
     border-radius: 1vw;
-    max-height: 90vh;
 }
 
 .order_confirmation_content_box1 img{
@@ -380,4 +380,15 @@ html, body{
     font-size: 1.1vw;
     font-weight: 700;
     color: var(--Rose_900);
+}
+#closeModalButton{
+    margin-top: 1.4vw;
+    width: 100%;
+    padding: 1vw;
+    border-radius: 10vw;
+    background-color: var(--Red);
+    border: none;
+    font-weight: 900;
+    color: var(--Rose_50);
+    cursor: pointer;
 }
