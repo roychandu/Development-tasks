@@ -17,7 +17,6 @@ const orderConfirmationModal = document.getElementById('orderConfirmationModal')
 const overlay = document.getElementById('overlay');
 const closeModalButton = document.getElementById('closeModalButton');
 const confirmOrder = document.querySelector(".order_confirmation_content_box2");
-const dessert_imgs = document.querySelectorAll(".img_box"); 
 
 let total_item = 0;
 const addedItems = new Array(add_btn.length).fill(false);
@@ -101,6 +100,7 @@ function finalConfirmOrder() {
             const img_box = document.createElement("div");
             img_box.setAttribute("class", "confirm_item_img");
 
+            // search usign id
             const imgElement = document.querySelector(`#img${index + 1}`);
             const backgroundImage = window.getComputedStyle(imgElement).backgroundImage;
             const imageUrl = backgroundImage.replace(/url\(["']?/, '').replace(/["']?\)$/, '');

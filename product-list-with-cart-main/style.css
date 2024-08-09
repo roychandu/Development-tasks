@@ -291,6 +291,7 @@ html, body{
     padding: 20px;
     z-index: 1;
     border-radius: 1vw;
+    max-height: 80vh;
 }
 
 .order_confirmation_content_box1 img{
@@ -304,7 +305,15 @@ html, body{
     font-weight: 500;
     color: var(--Rose_500);
 }
-
+.order_confirmation_content_box2{
+    margin-top: 1vw;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3vw;
+    max-height: 50vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
 .overlay {
     display: none; 
     position: fixed;
@@ -313,6 +322,7 @@ html, body{
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
+    
 }
 
 
@@ -321,22 +331,24 @@ html, body{
     display: flex;
     width: 30vw;
     gap: 1vw;
-    border: solid;
+    background-color: var(--Rose_300);
+    border-radius: 1vw;
+    padding: 0.8vw;
 }
 .confirm_item_img{
     width: 5vw;
     height: 5vw;
     background-size: cover;
     background-position: center;
+    border-radius: 1vw;
 }
 
 .confirm_item_details{
     /* padding-right: 5vw; */
+    flex: 1;
     border: solid;
 }
 .confirm_item_total{
-    position: absolute;
-    right: 10%;
     align-self: center;
     border: solid;
 }
