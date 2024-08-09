@@ -17,7 +17,7 @@ const orderConfirmationModal = document.getElementById('orderConfirmationModal')
 const overlay = document.getElementById('overlay');
 const closeModalButton = document.getElementById('closeModalButton');
 const confirmOrder = document.querySelector(".order_confirmation_content_box2");
-const dessert_img = document.querySelector(".img_box");
+const dessert_imgs = document.querySelectorAll(".img_box"); 
 
 let total_item = 0;
 const addedItems = new Array(add_btn.length).fill(false);
@@ -72,7 +72,7 @@ confirm_btn.addEventListener("click", () => {
     if (total_item > 0) {
         orderConfirmationModal.style.display = 'block';
         overlay.style.display = 'block';
-        finalConfirmOreder();
+        finalConfirmOrder();
     } else {
         alert("Your cart is empty!");
     }
@@ -84,11 +84,12 @@ closeModalButton.addEventListener("click", () => {
     resetCartAndButtons();
 });
 
-function finalConfirmOreder(){
+function finalConfirmOrder() {
     confirmOrder.innerHTML = "";
-    let grand_total = 
-    add_btn.forEach((btn, index) =>{
-        if(addedItems[index]){
+    let grand_total = 0;
+
+    add_btn.forEach((btn, index) => {
+        if (addedItems[index]) {
             const itemName = desserts[index].innerHTML.trim();
             const itemPrice = parseFloat(desserts_prices[index].innerHTML.replace(/[^0-9.-]+/g, ""));
             const itemQuantity = parseInt(quantities[index].innerHTML.trim());
@@ -99,41 +100,48 @@ function finalConfirmOreder(){
 
             const img_box = document.createElement("div");
             img_box.setAttribute("class", "confirm_item_img");
-            // img_box.innerHTML = dessert_img[index];
+
+            const imgElement = document.querySelector(`#img${index + 1}`);
+            const backgroundImage = window.getComputedStyle(imgElement).backgroundImage;
+            const imageUrl = backgroundImage.replace(/url\(["']?/, '').replace(/["']?\)$/, '');
+            img_box.style.backgroundImage = `url(${imageUrl})`;
 
             const detail_box = document.createElement("div");
             detail_box.setAttribute("class", "confirm_item_details");
-            detail_box.innerHTML = itemName;
-            
+            detail_box.innerHTML = `${itemName}`;
+
             const quantitie_box = document.createElement("div");
             quantitie_box.setAttribute("class", "confirm_item_quantity");
-            quantitie_box.innerHTML = itemQuantity;
+            quantitie_box.innerHTML = `${itemQuantity}x`;
 
             const item_total_box = document.createElement("div");
             item_total_box.setAttribute("class", "confirm_item_total");
-            item_total_box.innerHTML = totalPrice;
+            item_total_box.innerHTML = `$${totalPrice.toFixed(2)}`;
 
             const item_price_box = document.createElement("div");
             item_price_box.setAttribute("class", "item_price");
-            item_price_box.innerHTML = itemPrice; 
+            item_price_box.innerHTML = `@$${itemPrice.toFixed(2)}`;
 
-            
             detail_box.appendChild(quantitie_box);
             detail_box.appendChild(item_price_box);
             confirm_container.appendChild(img_box);
             confirm_container.appendChild(detail_box);
             confirm_container.appendChild(item_total_box);
-            
 
             confirmOrder.appendChild(confirm_container);
+            grand_total += totalPrice;
         }
-    })
+    });
+
+    total_price.innerHTML = `$${grand_total.toFixed(2)}`;
 }
+
 
 function updateSelectedItem() {
     selected_item.innerHTML = "";
     let total_calu = 0;
     let itemsInCart = false;
+
     add_btn.forEach((btn, index) => {
         if (addedItems[index]) {
             itemsInCart = true;
@@ -199,7 +207,7 @@ function updateSelectedItem() {
     }
 }
 
-function cartReset(){
+function cartReset() {
     img_empty.style.display = "block";
     cart_p.style.opacity = "1";
     total_order.style.height = "0";

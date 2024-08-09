@@ -316,7 +316,7 @@ html, body{
 }
 
 
-/* Confirm page styling */
+/* Confirm javascript divs page styling */
 .confirm_container{
     display: flex;
     width: 30vw;
@@ -326,8 +326,10 @@ html, body{
 .confirm_item_img{
     width: 5vw;
     height: 5vw;
-    border: solid;
+    background-size: cover;
+    background-position: center;
 }
+
 .confirm_item_details{
     /* padding-right: 5vw; */
     border: solid;
