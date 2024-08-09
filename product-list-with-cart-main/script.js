@@ -113,17 +113,23 @@ function finalConfirmOrder() {
             const quantitie_box = document.createElement("div");
             quantitie_box.setAttribute("class", "confirm_item_quantity");
             quantitie_box.innerHTML = `${itemQuantity}x`;
+            
+            const item_price_box = document.createElement("div");
+            item_price_box.setAttribute("class", "item_price");
+            item_price_box.innerHTML = `@$${itemPrice.toFixed(2)}`;
+
+            const item_quantity_price = document.createElement("div");
+            item_quantity_price.setAttribute("class", "item_quantity_price");
 
             const item_total_box = document.createElement("div");
             item_total_box.setAttribute("class", "confirm_item_total");
             item_total_box.innerHTML = `$${totalPrice.toFixed(2)}`;
 
-            const item_price_box = document.createElement("div");
-            item_price_box.setAttribute("class", "item_price");
-            item_price_box.innerHTML = `@$${itemPrice.toFixed(2)}`;
 
-            detail_box.appendChild(quantitie_box);
-            detail_box.appendChild(item_price_box);
+            item_quantity_price.appendChild(quantitie_box);
+            item_quantity_price.appendChild(item_price_box);
+
+            detail_box.appendChild(item_quantity_price);
             confirm_container.appendChild(img_box);
             confirm_container.appendChild(detail_box);
             confirm_container.appendChild(item_total_box);

@@ -344,11 +344,22 @@ html, body{
 }
 
 .confirm_item_details{
-    /* padding-right: 5vw; */
     flex: 1;
-    border: solid;
+    line-height: 2vw;
+    font-weight: 700;
+}
+.item_quantity_price{
+    display: flex;
+    gap: 2vw;
+    /* border: solid; */
+}
+.confirm_item_quantity{
+    color: var(--Red);
+}
+.item_price{
+    color: var(--Rose_500);
 }
 .confirm_item_total{
     align-self: center;
-    border: solid;
+    font-weight: 900;
 }
