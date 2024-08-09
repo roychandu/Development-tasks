@@ -291,7 +291,7 @@ html, body{
     padding: 20px;
     z-index: 1;
     border-radius: 1vw;
-    max-height: 80vh;
+    max-height: 90vh;
 }
 
 .order_confirmation_content_box1 img{
@@ -333,11 +333,11 @@ html, body{
     gap: 1vw;
     background-color: var(--Rose_300);
     border-radius: 1vw;
-    padding: 0.8vw;
+    padding: 0.5vw;
 }
 .confirm_item_img{
-    width: 5vw;
-    height: 5vw;
+    width: 4vw;
+    height: 4vw;
     background-size: cover;
     background-position: center;
     border-radius: 1vw;
@@ -362,4 +362,22 @@ html, body{
 .confirm_item_total{
     align-self: center;
     font-weight: 900;
+}
+.order_confirmation_content_box3{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--Rose_300);
+    margin-top: 1vw;
+    padding: 1vw;
+    border-radius: 1vw;
+}
+.order_confirmation_content_box3 span{
+    font-size: 2vw;
+    font-weight: 900;
+}
+.order_confirmation_content_box3 p{
+    font-size: 1.1vw;
+    font-weight: 700;
+    color: var(--Rose_900);
 }

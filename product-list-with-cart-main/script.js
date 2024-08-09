@@ -17,6 +17,7 @@ const orderConfirmationModal = document.getElementById('orderConfirmationModal')
 const overlay = document.getElementById('overlay');
 const closeModalButton = document.getElementById('closeModalButton');
 const confirmOrder = document.querySelector(".order_confirmation_content_box2");
+const confirmtotalOrder = document.querySelector(".order_confirmation_content_box3_span");
 
 let total_item = 0;
 const addedItems = new Array(add_btn.length).fill(false);
@@ -134,12 +135,14 @@ function finalConfirmOrder() {
             confirm_container.appendChild(detail_box);
             confirm_container.appendChild(item_total_box);
 
-            confirmOrder.appendChild(confirm_container);
+
             grand_total += totalPrice;
+
+            confirmOrder.appendChild(confirm_container);
+            confirmtotalOrder.innerHTML = `$${grand_total.toFixed(2)}`;
         }
     });
 
-    total_price.innerHTML = `$${grand_total.toFixed(2)}`;
 }
 
 
