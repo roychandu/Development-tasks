@@ -28,6 +28,7 @@ add_btn.forEach((btn, index) => {
     btn.addEventListener("click", () => {
         if (!addedItems[index]) {
             quantity = 1;
+            addedItems[index] = true;
 
             btn.style.backgroundColor = "hsl(14, 86%, 42%)";
             btn.style.border = "hsl(14, 86%, 42%)";
@@ -43,7 +44,6 @@ add_btn.forEach((btn, index) => {
             total_order.style.height = "max-content";
             total_order.style.opacity = "1";
 
-            addedItems[index] = true;
             updateTotalItems();
             updateSelectedItem();
         }
