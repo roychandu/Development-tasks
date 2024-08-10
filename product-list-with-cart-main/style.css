@@ -437,4 +437,16 @@ html, body{
     .price{
         font-size: 5vw;
     }
+
+
+    .right_part{
+        width: 100%;
+    }
+    .right_part .right_part_heading{
+        margin-top: 4vw;
+        padding-left: 8vw;
+    }
+    .total_items{
+        font-size: 5vw;
+    }
 }
