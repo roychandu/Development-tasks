@@ -219,6 +219,7 @@ html, body{
     display: flex;
     justify-content: space-between;
     padding: 0.5vw 1vw;
+    align-items: center;
 }
 .total_order_box1 p{
     transform: translateY(30%);
@@ -448,5 +449,33 @@ html, body{
     }
     .total_items{
         font-size: 5vw;
+    }
+    .right_part p{
+        margin-bottom: 5vw;
+    }
+    .cart_item{
+        padding: 0 4vw;
+    }
+    .total_order{
+        padding: 2vw 4vw;
+    }
+    .total_price{
+        font-size: 6vw;
+    }
+    .confirm_button{
+        margin: 3vw 4vw;
+    }
+    /* JavaScript divs */
+    .selected_item{
+        margin-bottom: 4vw;
+    }
+    .item_details{
+        padding-bottom: 4vw;
+        gap: 10vw;
+    }
+    .Cancel_item{
+        width: 6vw;
+        height: 6vw;
+        left: 85%;
     }
 }
