@@ -393,3 +393,48 @@ html, body{
     color: var(--Rose_50);
     cursor: pointer;
 }
+
+
+/* Responsiveness  */
+@media (max-width : 600px) {
+    .main{
+        flex-direction: column;
+        padding: 2vw;
+        gap: 15vw;
+    }
+    .left_part{
+        width: 100%;
+    }
+    .dessert_box{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .left_part_box{
+        width: 90%;
+    }
+    .img_box .btn_box{
+        justify-content: space-evenly;
+    }
+    .decrese_img{
+        width: 8vw;
+        height: 8vw;
+        padding: 1vw;
+    }
+    .increse_img{
+        width: 8vw;
+        height: 8vw;
+        padding: 1vw;
+    }
+    .left_part_box .detail_box{
+        justify-content: end;
+    }
+    .left_part_box .detail_box > :nth-child(1){
+        font-size: 4vw;
+    }
+    .left_part_box .detail_box > :nth-child(2){
+        font-size: 5vw;
+    }
+    .price{
+        font-size: 5vw;
+    }
+}
