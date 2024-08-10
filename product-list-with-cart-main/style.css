@@ -478,4 +478,53 @@ html, body{
         height: 6vw;
         left: 85%;
     }
+
+    /* confirm page responsive */
+    .order-confirmation-modal {
+        max-height: auto;
+        width: 90%;
+        /* padding: 20px; */
+    }
+    
+    .order_confirmation_content_box1 img{
+        width: 8vw;
+    }
+    .order_confirmation_content_box1 h1{
+        font-size: 7vw;
+    }
+    .order_confirmation_content_box1 p{
+        font-size: 4vw;
+    }
+    .order_confirmation_content_box2{
+        gap: 2vw;
+        margin-top: 4vw;
+    }
+    .confirm_container{
+        width: 100%;
+        height: 8vh;
+        align-items: center;
+        padding-left: 2vw;
+        padding-right: 2vw;
+        gap: 2vw;
+    }
+    .confirm_item_img{
+        width: 12vw;
+        height: 12vw;
+    }
+    
+    .confirm_item_details{
+        line-height: 5vw;
+    }
+    
+    .order_confirmation_content_box3{
+        margin-top: 4vw;
+        margin-bottom: 2vw;
+    }
+    .order_confirmation_content_box3 span{
+        font-size: 7vw;
+    }
+    #closeModalButton{
+        padding-top: 4vw;
+        padding-bottom: 4vw;
+    }
 }
