@@ -1,6 +1,6 @@
 # Frontend Mentor - Product list with cart
 
-![Design preview for the Product list with cart coding challenge](/design/preview.jpg)
+![Design preview for the Product list with cart coding challenge](./design/preview.jpg)
 
 ## Welcome! 👋
 
@@ -34,4 +34,4 @@
 - Weights: 400, 600, 700
 
 ### Links
-- Live Link: [Click here]()
+- Live Link: [Click here](https://add-to-cart-project-07.netlify.app/)
