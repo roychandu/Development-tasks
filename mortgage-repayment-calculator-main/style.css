@@ -19,3 +19,7 @@ html, body{
     height: 100%;
     font-family: "Plus Jakarta Sans", sans-serif;
 }
+.main{
+    width: 100%;
+    height: auto;
+}
