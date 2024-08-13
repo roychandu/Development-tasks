@@ -87,12 +87,34 @@ html, body{
     font-weight: 700;
     color: var(--Slate_700);
 }
+.amount_input{
+    position: relative;
+}
+.left_part_box2 .amount_input::after{
+    content: "£";
+    position: absolute;
+    width: 12%;
+    height: 94%;
+    left: 1.5px;
+    border-top-left-radius: 0.6vw;
+    border-bottom-left-radius: 0.6vw;
+    text-align: center;
+    align-content: center;
+    font-size: 1.6vw;
+    font-weight: 700;
+    background-color: var(--Slate_100);
+    border-top: solid 2px var(--Slate_700);
+    border-bottom: solid 2px var(--Slate_700);
+}
 .left_part_box2 input{
     height: 3.5vw;
+    width: 100%;
     font-size: 1.5vw;
     border-radius: 0.6vw;
+    padding-left: 5vw;
     border: solid 2px var(--Slate_700);
 }
+
 
 
 
