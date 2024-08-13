@@ -75,6 +75,32 @@ html, body{
     background-color: var(--Slate_900);
     transition: width 0.3s ease-in-out;
 }
+.left_part_box2{
+    margin-top: 3vw;
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+    padding: 0 2vw;
+}
+.left_part_box2 label{
+    font-size: 1vw;
+    font-weight: 700;
+    color: var(--Slate_700);
+}
+.left_part_box2 input{
+    height: 3.5vw;
+    font-size: 1.5vw;
+    border-radius: 0.6vw;
+    border: solid 2px var(--Slate_700);
+}
+
+
+
+
+
+
+
+
 .right_part{
     width: 50%;
     height: 100%;
