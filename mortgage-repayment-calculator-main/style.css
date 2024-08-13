@@ -28,7 +28,7 @@ html, body{
     background-color: var(--Slate_300);
 }
 .container{
-    width: 60%;
+    width: 70%;
     height: 80%;
     display: flex;
     background-color: var(--White);
@@ -40,6 +40,40 @@ html, body{
     border-top-left-radius: 2vw;
     border-bottom-left-radius: 2vw;
 
+}
+.left_part_box1{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2vw;
+    margin-top: 2vw;
+}
+.left_part_box1 h1{
+    font-size: 1.5vw;
+}
+.left_part_box1 h3{
+    position: relative;
+    display: inline-block;
+    font-size: 1vw;
+    cursor: pointer;
+    color: var(--Slate_700);
+}
+/* hover with animation */
+.left_part_box1 h3:hover{
+    color: var(--Slate_900);
+}
+.left_part_box1 h3:hover::after{
+    width: 100%;
+}
+.left_part_box1 h3::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background-color: var(--Slate_900);
+    transition: width 0.3s ease-in-out;
 }
 .right_part{
     width: 50%;
