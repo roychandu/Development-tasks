@@ -194,8 +194,30 @@ html, body{
     margin-top: 2vw;
     padding: 0 2vw;
     display: flex;
-    gap: 1vw;
+    flex-direction: column;
+    gap: 0.7vw;
+}
+.radio_input{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5vw;
+}
+.radio_input1{
+    padding: 1vw;
+    display: flex;
+    gap: 0.6vw;
+    cursor: pointer;
+    border: solid 2px var(--Slate_700);
+    border-radius: 0.6vw;
+}
+.radio_input2{
     border: solid;
+    display: flex;
+    gap: 0.6vw;
+    padding: 1vw;
+    cursor: pointer;
+    border: solid 2px var(--Slate_700);
+    border-radius: 0.6vw;
 }
 
 
