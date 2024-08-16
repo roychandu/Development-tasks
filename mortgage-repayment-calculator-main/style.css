@@ -190,7 +190,13 @@ html, body{
     border-bottom: solid 2px var(--Slate_700);
 }
 
-
+.left_part_box4{
+    margin-top: 2vw;
+    padding: 0 2vw;
+    display: flex;
+    gap: 1vw;
+    border: solid;
+}
 
 
 
