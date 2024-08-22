@@ -77,7 +77,7 @@ WSGI_APPLICATION = 'form_submission_project.wsgi.application'
 DATABASES = {
     'default': {
         "ENGINE": "mssql",
-        "NAME": "JsonFile",
+        "NAME": "SignUp_django",
         "USER": "",
         "PASSWORD": "",
         "HOST": "localhost\\SQLEXPRESS",
