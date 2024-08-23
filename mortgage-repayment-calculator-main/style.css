@@ -202,24 +202,19 @@ html, body{
     flex-direction: column;
     gap: 0.5vw;
 }
-.radio_input1{
+.radio_input1, .radio_input2{
     padding: 1vw;
     display: flex;
     gap: 0.6vw;
     cursor: pointer;
     border: solid 2px var(--Slate_700);
     border-radius: 0.6vw;
+    font-weight: bold;
 }
-.radio_input2{
-    border: solid;
-    display: flex;
-    gap: 0.6vw;
-    padding: 1vw;
+.radio_input1 input, .radio_input2 input{
     cursor: pointer;
-    border: solid 2px var(--Slate_700);
-    border-radius: 0.6vw;
+    width: 2vw;
 }
-
 
 
 .right_part{
