@@ -48,16 +48,22 @@
          <div class="left_part_box4">
           <label class="input_label" for="">Mortgage Type</label>
           <div class="radio_input">
-            <div class="radio_input1">
+            <div class="radio_input1" onclick="selectRadio('repay')">
               <input type="radio" name="payment" id="repay">
               <label for="repay">Repayment</label>
             </div>
-            <div class="radio_input2">
+            <div class="radio_input2" onclick="selectRadio('Interest')">
               <input type="radio" name="payment" id="Interest">
               <label for="Interest">Interest Only</label>
             </div>
           </div>
          </div>
+         
+         <script>
+          function selectRadio(radioid){
+            document.getElementById(radioid).checked = true;
+          }
+         </script>
 
          <!-- box5 -->
           <div class="left_part_box5"></div>
