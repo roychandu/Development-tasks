@@ -36,7 +36,6 @@ html, body{
 }
 .left_part{
     width: 50%;
-    height: 100%;
     border-top-left-radius: 2vw;
     border-bottom-left-radius: 2vw;
 
@@ -46,7 +45,7 @@ html, body{
     align-items: center;
     justify-content: space-between;
     padding: 0 2vw;
-    margin-top: 2vw;
+    margin-top: 1vw;
 }
 .left_part_box1 h1{
     font-size: 1.5vw;
@@ -76,7 +75,7 @@ html, body{
     transition: width 0.3s ease-in-out;
 }
 .left_part_box2{
-    margin-top: 3vw;
+    margin-top: 2vw;
     display: flex;
     flex-direction: column;
     gap: 1vw;
@@ -116,7 +115,7 @@ html, body{
 }
 
 .left_part_box3{
-    margin-top: 2vw;
+    margin-top: 1vw;
     padding: 0 2vw;
     display: flex;
     gap: 1vw;
@@ -214,6 +213,35 @@ html, body{
 .radio_input1 input, .radio_input2 input{
     cursor: pointer;
     width: 2vw;
+}
+
+.left_part_box5{
+    margin-top: 2vw;
+    padding: 0 2vw;
+    display: flex;
+    flex-direction: column;
+    gap: 0.7vw;
+    position: relative;
+}
+.left_part_box5 img{
+    position: absolute;
+    top: 50%;            
+    transform: translateY(-50%);
+    left: 10%;
+}
+.left_part_box5 button{
+    width: 70%;
+    padding: 1vw 3vw;
+    border-radius: 2vw;
+    font-size: 1.3vw;
+    font-weight: 600;
+    background-color: var(--Lime);
+    cursor: pointer;
+    border: none;
+    color: var(--Slate_900);
+}
+.left_part_box5 button:hover{
+    box-shadow: 1px 2px 2px 1px var(--Red);
 }
 
 
