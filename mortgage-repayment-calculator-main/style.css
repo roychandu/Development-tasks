@@ -253,6 +253,13 @@ html, body{
     border-bottom-right-radius: 2vw;
     border-bottom-left-radius: 6vw;
 }
-.right_part_box{
-    border: solid;
+.right_part_box h1{
+    color: var(--Slate_100);
+    font-weight: 700;
+    font-size: 2vw;
+}
+.right_part_box p{
+    color: var(--Slate_500);
+    font-weight: 700;
+    font-size: 1vw;
 }
