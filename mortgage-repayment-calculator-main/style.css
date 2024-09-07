@@ -253,3 +253,6 @@ html, body{
     border-bottom-right-radius: 2vw;
     border-bottom-left-radius: 6vw;
 }
+.right_part_box{
+    border: solid;
+}
